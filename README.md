@@ -3,7 +3,7 @@ Allows more than 4 players to join an instance of Arkshot (Steam ID 468800). Req
 
 # Installation
 ## Prerequisites
-###BepInEx
+### BepInEx
 The plugin was developed with [5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21/), so if in doubt use that. Make sure to download the 32-bit / x86 edition. Further instructions can be found [here](https://docs.bepinex.dev/articles/user_guide/installation/index.html). Arkshot also requires the alternative endpoint, detailed [here](https://docs.bepinex.dev/articles/user_guide/troubleshooting.html#change-the-entry-point-1)
 ### Arkshot-MultiplayerSync
 [MultiplayerSync](https://github.com/Hypersycos/Arkshot-MultiplayerSync) must be installed in the plugins folder, or the plugin will not load.
