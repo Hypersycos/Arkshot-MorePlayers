@@ -1,15 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
-using BepInEx.Logging;
 using HarmonyLib;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection.Emit;
 
 namespace MorePlayers
 {
-    [BepInPlugin("hypersycos.plugins.arkshot.moreplayers", "More Players", "1.0.0")]
+    [BepInPlugin("hypersycos.plugins.arkshot.moreplayers", "More Players", "1.1.0")]
     [BepInProcess("Arkshot.exe")]
     public class Plugin : BaseUnityPlugin
     {
@@ -21,6 +18,9 @@ namespace MorePlayers
                 "MaxPlayerCount",
                 4,
                 "The new max player count to use");
+
+            MultiplayerSync.MultiplayerSync.RegisterConditionalRequirement(this, () => configMaxPlayerCount.Value > 4);
+
             // Plugin startup logic
             Instance = this;
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
