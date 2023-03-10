@@ -7,6 +7,7 @@ using System.Reflection.Emit;
 namespace MorePlayers
 {
     [BepInPlugin("hypersycos.plugins.arkshot.moreplayers", "More Players", "1.1.0")]
+    [BepInDependency("hypersycos.plugins.arkshot.multiplayersync")]
     [BepInProcess("Arkshot.exe")]
     public class Plugin : BaseUnityPlugin
     {
